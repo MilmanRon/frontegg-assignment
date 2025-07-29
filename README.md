@@ -5,8 +5,8 @@ Angular application demonstrating Frontegg authentication integration for Tier-1
 ## Project Structure
 - `/src` - Angular application with Frontegg integration
 - `/docs` - Assignment documentation
-  - `improvement-suggestions.pdf` - 3 UX improvement recommendations
-  - `qa-answers.pdf` - Common support questions and answers
+  - `Items for Improvement.pdf` - 3 improvement recommendations
+  - `Common Questions Answers.pdf` - Common support questions and answers
 
 ## Features Implemented
 - ✅ Hosted login authentication
@@ -42,8 +42,6 @@ The app is configured with Frontegg credentials:
 1. Click "Login" to authenticate via Frontegg's hosted login
 2. View your profile information on the homepage
 3. Use "Settings" button to access the admin portal
-4. Invite users with restricted permissions
-5. Manage API tokens for M2M authentication
 
 ## Technical Details
 - Angular 20.0.3 with standalone components
@@ -53,5 +51,5 @@ The app is configured with Frontegg credentials:
 
 ## Assignment Deliverables
 - **Working Angular application** with full Frontegg integration
-- **UX improvement suggestions** based on hands-on experience
+- **Improvement suggestions** based on hands-on experience
 - **Support Q&A document** covering common user issues
