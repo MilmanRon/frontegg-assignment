@@ -40,10 +40,14 @@ export class App implements OnInit, OnDestroy {
     this.fronteggAuthService.loginWithRedirect();
   }
 
-logOut(): void {
+  logOut(): void {
     const fronteggBaseUrl = 'https://app-tkyztdfvr4u7.frontegg.com';
     window.location.href = `${fronteggBaseUrl}/oauth/logout?post_logout_redirect_uri=${window.location}`;
-}
+  }
+
+  showAdminPortal(): void {
+    this.fronteggAppService?.showAdminPortal();
+  }
 
   ngOnDestroy(): void {
     this.loadingSubscription.unsubscribe();
