@@ -1,59 +1,57 @@
-# FronteggAssignment
+# Frontegg Technical Assignment
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
+Angular application demonstrating Frontegg authentication integration for Tier-1 Technical Support Engineer role.
 
-## Development server
+## Project Structure
+- `/src` - Angular application with Frontegg integration
+- `/docs` - Assignment documentation
+  - `improvement-suggestions.pdf` - 3 UX improvement recommendations
+  - `qa-answers.pdf` - Common support questions and answers
 
-To start a local development server, run:
+## Features Implemented
+- ✅ Hosted login authentication
+- ✅ User profile display (name and picture)
+- ✅ Admin portal integration via Settings button
+- ✅ Proper logout functionality
 
+## Setup
+
+### Prerequisites
+- Node.js (v18+)
+- Angular CLI
+
+### Installation
+```bash
+git clone [repository-url]
+cd frontegg-assignment
+npm install
+```
+
+### Development Server
 ```bash
 ng serve
 ```
+Navigate to `http://localhost:4200/`. The app will reload automatically when you modify source files.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Configuration
+The app is configured with Frontegg credentials:
+- Base URL: `https://app-tkyztdfvr4u7.frontegg.com`
+- Client ID: `064e6075-72a4-4430-bc70-7fc5e9ab31fd`
 
-## Code scaffolding
+## Usage
+1. Click "Login" to authenticate via Frontegg's hosted login
+2. View your profile information on the homepage
+3. Use "Settings" button to access the admin portal
+4. Invite users with restricted permissions
+5. Manage API tokens for M2M authentication
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Technical Details
+- Angular 20.0.3 with standalone components
+- Frontegg Angular SDK integration
+- Hosted authentication flow
+- CORS configuration for localhost development
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Assignment Deliverables
+- **Working Angular application** with full Frontegg integration
+- **UX improvement suggestions** based on hands-on experience
+- **Support Q&A document** covering common user issues
