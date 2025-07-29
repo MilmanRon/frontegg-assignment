@@ -1,5 +1,5 @@
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import {
   FronteggAuthService,
   FronteggAppService,
@@ -18,6 +18,7 @@ export class App implements OnInit, OnDestroy {
 
   private fronteggAuthService = inject(FronteggAuthService);
   private fronteggAppService = inject(FronteggAppService);
+  private router = inject(Router);
 
   isLoading = true;
   loadingSubscription: Subscription;
@@ -39,11 +40,10 @@ export class App implements OnInit, OnDestroy {
     this.fronteggAuthService.loginWithRedirect();
   }
 
-  logOut(): void {
-    const baseUrl = ContextHolder.for('Angular Demo App').getContext()
-      .baseUrl;
-    window.location.href = `${baseUrl}/oauth/logout?post_logout_redirect_uri=${window.location}`;
-  }
+logOut(): void {
+    const fronteggBaseUrl = 'https://app-tkyztdfvr4u7.frontegg.com';
+    window.location.href = `${fronteggBaseUrl}/oauth/logout?post_logout_redirect_uri=${window.location}`;
+}
 
   ngOnDestroy(): void {
     this.loadingSubscription.unsubscribe();
