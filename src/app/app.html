@@ -1,17 +1,25 @@
-@if(!isLoading){
-<div>
-  @if(user){
-  <div>
-    <img src={{user?.profilePictureUrl}} alt={{user?.name}} />
-    <div>User name: {{user?.name}}</div>
-    <button (click)="logOut()">Log out</button>
-    <button (click)="showAdminPortal()">Settings</button>
-  </div>
-  } @else {
-  <div>
-    <h1>Hello!</h1>
-    <button (click)="loginWithRedirect()">Login with redirect</button>
-  </div>
-  }
-</div>
+@if(!isLoading){ 
+    @if(user){
+        <div>
+        <img src="{{user?.profilePictureUrl}}" alt="{{user?.name}}" />
+        <div>User name: {{user?.name}}</div>
+        <button (click)="logOut()">Log out</button>
+        <button (click)="showAdminPortal()">Settings</button>
+        </div>
+
+        <select (change)="onTenantChange($event)">
+            @for (tenant of tenantsState().tenants; track tenant.tenantId) {
+                <option
+                    [value]="tenant.tenantId" 
+                    [selected]="tenant.tenantId === tenantsState().activeTenant.tenantId">
+                    {{tenant.name}}
+                </option>
+            }
+        </select>
+    }@else{
+        <div>
+        <h1>Hello!</h1>
+        <button (click)="loginWithRedirect()">Login with redirect</button>
+        </div>
+    } 
 }
