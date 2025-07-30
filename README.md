@@ -13,6 +13,7 @@ Angular application demonstrating Frontegg authentication integration for Tier-1
 - ✅ User profile display (name and picture)
 - ✅ Admin portal integration via Settings button
 - ✅ Proper logout functionality
+- ✅ Tenant Switching
 
 ## Setup
 

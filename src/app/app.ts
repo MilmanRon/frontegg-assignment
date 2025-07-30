@@ -21,7 +21,7 @@ import { Subscription } from 'rxjs';
 export class App implements OnInit, OnDestroy {
   protected title = 'frontegg-assignment';
 
-  fronteggAuthService = inject(FronteggAuthService);
+  private fronteggAuthService = inject(FronteggAuthService);
   private fronteggAppService = inject(FronteggAppService);
 
   isLoading = true;

@@ -1,1 +1,129 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  text-align: center;
+  margin-block: 1rem;
+}
+
+button {
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 8px;
+  border: none;
+  width: 200px;
+  transition: 300ms;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.bg-primary {
+  background-color: rgb(88, 176, 235);
+}
+
+.bg-secondary {
+  background-color: rgb(108, 117, 125);
+}
+
+.bg-danger {
+  background-color: rgb(220, 53, 69);
+}
+
+.bg-primary:hover {
+  background-color: rgb(107, 196, 255);
+}
+
+.bg-secondary:hover {
+  background-color: rgb(89, 95, 100);
+}
+
+.bg-danger:hover {
+  background-color: rgb(255, 15, 39);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.user-details {
+  display: flex;
+  margin: 1rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+.user-details > img {
+  border-radius: 100%;
+  width: 8rem;
+  height: 8rem;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.158);
+}
+
+.username {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.dropdown-container::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #6b7280;
+    pointer-events: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.dropdown {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 6px 16px;
+  padding-right: 48px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #374151;
+  background-color: #ffffff;
+  border: 2px solid #bcbec1;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropdown:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-container:hover::after {
+  border-top-color: #374151;
+}
+
+.dropdown:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
